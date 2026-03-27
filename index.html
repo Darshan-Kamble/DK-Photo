@@ -4,13 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dipak Photo | Every Frame Tells a Story</title>
-    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -30,21 +27,14 @@
             }
         }
     </script>
-    <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <!-- Three.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <!-- Add GLTF Loader -->
     <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
-
-    <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
-    
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-primary text-gray-200 font-inter antialiased">
-    <!-- Film Grain overlay -->
     <div class="film-grain"></div>
 
     <!-- Sticky Header -->
@@ -62,16 +52,13 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero -->
     <section id="hero" class="relative w-full h-screen flex flex-col md:flex-row items-center overflow-hidden">
-        
-        <!-- White Smoke Background -->
         <div class="smoke-wrapper">
             <div class="smoke-cloud smoke-1"></div>
             <div class="smoke-cloud smoke-2"></div>
             <div class="smoke-cloud smoke-3"></div>
         </div>
-
         <div class="relative z-10 w-full md:w-3/5 px-6 md:px-16 pt-24 md:pt-0 flex flex-col justify-center">
             <h1 class="font-playfair text-6xl md:text-[5.5rem] font-bold leading-tight mb-6 mt-10 text-white tracking-wide">Every Frame <br> <span class="text-accent italic">Tells A Story</span></h1>
             <p class="text-lg text-gray-400 mb-8 max-w-md">Premium photography for life's most precious moments - at prices that feel right.</p>
@@ -82,16 +69,14 @@
         <div id="canvas-container" class="absolute top-0 right-0 w-full md:w-1/2 h-full z-[5] opacity-100 pointer-events-none"></div>
     </section>
 
-    <!-- Services Section -->
+    <!-- Services -->
     <section id="services" class="py-24 px-6 md:px-16 bg-primary relative z-10">
         <div class="max-w-7xl mx-auto">
             <h2 class="font-playfair text-4xl md:text-5xl font-bold mb-16 text-center text-white relative inline-block mx-auto flex justify-center w-full">
                 <span>Our Services</span>
-                <div class="absolute -bottom-4 left-1/2 -translate-x-1/2 w-12 h-1 bg-accent rounded-full text-center"></div>
+                <div class="absolute -bottom-4 left-1/2 -translate-x-1/2 w-12 h-1 bg-accent rounded-full"></div>
             </h2>
-            
             <div class="services-grid mt-12 w-full">
-                <!-- Card 1 -->
                 <div class="service-card group bg-surface relative overflow-hidden transition-all duration-500 border border-gray-800 h-[320px]">
                     <div class="absolute inset-0 w-full md:group-hover:w-[55%] p-6 md:p-8 bg-surface z-10 transition-all duration-500 ease-in-out flex flex-col justify-center">
                         <div class="absolute top-4 right-4 bg-cyan/10 text-cyan text-xs font-bold px-3 py-1 rounded-full border border-cyan/20 transition-opacity md:group-hover:opacity-0">Affordable Pricing</div>
@@ -100,12 +85,10 @@
                         <p class="text-gray-400 text-sm leading-relaxed">Comprehensive coverage for your special day from preparation to reception.</p>
                     </div>
                     <div class="absolute top-0 right-0 w-full md:w-[45%] h-full transform translate-x-full md:group-hover:translate-x-0 transition-transform duration-500 ease-in-out z-0">
-                        <img src="https://picsum.photos/seed/weddings/400/600" alt="Marriage" class="w-full h-full object-cover opacity-60">
+                        <img src="images/marriage.png" alt="Marriage" class="w-full h-full object-cover opacity-60">
                         <div class="absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-surface to-transparent"></div>
                     </div>
                 </div>
-
-                <!-- Card 2 -->
                 <div class="service-card group bg-surface relative overflow-hidden transition-all duration-500 border border-gray-800 h-[320px]">
                     <div class="absolute inset-0 w-full md:group-hover:w-[55%] p-6 md:p-8 bg-surface z-10 transition-all duration-500 ease-in-out flex flex-col justify-center">
                         <div class="absolute top-4 right-4 bg-cyan/10 text-cyan text-xs font-bold px-3 py-1 rounded-full border border-cyan/20 transition-opacity md:group-hover:opacity-0">Affordable Pricing</div>
@@ -114,12 +97,10 @@
                         <p class="text-gray-400 text-sm leading-relaxed">Capture the promise of forever with our intimate engagement photoshoots.</p>
                     </div>
                     <div class="absolute top-0 right-0 w-full md:w-[45%] h-full transform translate-x-full md:group-hover:translate-x-0 transition-transform duration-500 ease-in-out z-0">
-                        <img src="https://picsum.photos/seed/ceremony/400/600" alt="Engagement" class="w-full h-full object-cover opacity-60">
+                        <img src="images/engagement.png" alt="Engagement" class="w-full h-full object-cover opacity-60">
                         <div class="absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-surface to-transparent"></div>
                     </div>
                 </div>
-
-                <!-- Card 3 -->
                 <div class="service-card group bg-surface relative overflow-hidden transition-all duration-500 border border-gray-800 h-[320px]">
                     <div class="absolute inset-0 w-full md:group-hover:w-[55%] p-6 md:p-8 bg-surface z-10 transition-all duration-500 ease-in-out flex flex-col justify-center">
                         <div class="absolute top-4 right-4 bg-cyan/10 text-cyan text-xs font-bold px-3 py-1 rounded-full border border-cyan/20 transition-opacity md:group-hover:opacity-0">Affordable Pricing</div>
@@ -128,12 +109,10 @@
                         <p class="text-gray-400 text-sm leading-relaxed">Fun, vibrant, and memorable birthday photography for all ages.</p>
                     </div>
                     <div class="absolute top-0 right-0 w-full md:w-[45%] h-full transform translate-x-full md:group-hover:translate-x-0 transition-transform duration-500 ease-in-out z-0">
-                        <img src="https://picsum.photos/seed/bday/400/600" alt="Birthdays" class="w-full h-full object-cover opacity-60">
+                        <img src="images/birthday.png" alt="Birthdays" class="w-full h-full object-cover opacity-60">
                         <div class="absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-surface to-transparent"></div>
                     </div>
                 </div>
-
-                <!-- Card 4 -->
                 <div class="service-card group bg-surface relative overflow-hidden transition-all duration-500 border border-gray-800 h-[320px]">
                     <div class="absolute inset-0 w-full md:group-hover:w-[55%] p-6 md:p-8 bg-surface z-10 transition-all duration-500 ease-in-out flex flex-col justify-center">
                         <div class="absolute top-4 right-4 bg-cyan/10 text-cyan text-xs font-bold px-3 py-1 rounded-full border border-cyan/20 transition-opacity md:group-hover:opacity-0">Affordable Pricing</div>
@@ -142,7 +121,7 @@
                         <p class="text-gray-400 text-sm leading-relaxed">Professional portraits, fashion shoots, or creative personal projects.</p>
                     </div>
                     <div class="absolute top-0 right-0 w-full md:w-[45%] h-full transform translate-x-full md:group-hover:translate-x-0 transition-transform duration-500 ease-in-out z-0">
-                        <img src="https://picsum.photos/seed/photoshoot/400/600" alt="Personal" class="w-full h-full object-cover opacity-60">
+                        <img src="images/photoshoot.png" alt="Personal" class="w-full h-full object-cover opacity-60">
                         <div class="absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-surface to-transparent"></div>
                     </div>
                 </div>
@@ -150,200 +129,374 @@
         </div>
     </section>
 
-    <!-- Portfolio Section -->
+    <!-- Portfolio -->
     <section id="portfolio" class="py-24 px-6 md:px-16 bg-primary relative z-10">
         <div class="max-w-7xl mx-auto">
             <h2 class="font-playfair text-4xl md:text-5xl font-bold mb-16 text-white text-center">
                 Our Work
                 <div class="h-1 w-16 bg-accent mx-auto mt-4"></div>
             </h2>
-            
             <div class="masonry-grid">
-                <div class="masonry-item portfolio-item group">
-                    <img src="https://picsum.photos/seed/dk1/400/600" alt="DK Photo 1" class="w-full h-auto object-cover">
-                    <div class="portfolio-overlay">
-                        <i data-lucide="eye" class="text-white w-8 h-8"></i>
-                    </div>
-                </div>
-                <div class="masonry-item portfolio-item group">
-                    <img src="https://picsum.photos/seed/dk2/400/300" alt="DK Photo 2" class="w-full h-auto object-cover">
-                    <div class="portfolio-overlay"><i data-lucide="eye" class="text-white w-8 h-8"></i></div>
-                </div>
-                <div class="masonry-item portfolio-item group">
-                    <img src="https://picsum.photos/seed/dk3/400/500" alt="DK Photo 3" class="w-full h-auto object-cover">
-                    <div class="portfolio-overlay"><i data-lucide="eye" class="text-white w-8 h-8"></i></div>
-                </div>
-                <div class="masonry-item portfolio-item group">
-                    <img src="https://picsum.photos/seed/dk4/400/400" alt="DK Photo 4" class="w-full h-auto object-cover">
-                    <div class="portfolio-overlay"><i data-lucide="eye" class="text-white w-8 h-8"></i></div>
-                </div>
-                <div class="masonry-item portfolio-item group">
-                    <img src="https://picsum.photos/seed/dk5/400/700" alt="DK Photo 5" class="w-full h-auto object-cover">
-                    <div class="portfolio-overlay"><i data-lucide="eye" class="text-white w-8 h-8"></i></div>
-                </div>
-                <div class="masonry-item portfolio-item group">
-                    <img src="https://picsum.photos/seed/dk6/400/400" alt="DK Photo 6" class="w-full h-auto object-cover">
-                    <div class="portfolio-overlay"><i data-lucide="eye" class="text-white w-8 h-8"></i></div>
-                </div>
-                <div class="masonry-item portfolio-item group">
-                    <img src="https://picsum.photos/seed/dk7/400/550" alt="DK Photo 7" class="w-full h-auto object-cover">
-                    <div class="portfolio-overlay"><i data-lucide="eye" class="text-white w-8 h-8"></i></div>
-                </div>
-                <div class="masonry-item portfolio-item group">
-                    <img src="https://picsum.photos/seed/dk8/400/350" alt="DK Photo 8" class="w-full h-auto object-cover">
-                    <div class="portfolio-overlay"><i data-lucide="eye" class="text-white w-8 h-8"></i></div>
-                </div>
+                <div class="masonry-item portfolio-item group"><img src="https://picsum.photos/seed/dk1/400/600" alt="DK Photo 1" class="w-full h-auto object-cover"><div class="portfolio-overlay"><i data-lucide="eye" class="text-white w-8 h-8"></i></div></div>
+                <div class="masonry-item portfolio-item group"><img src="https://picsum.photos/seed/dk2/400/300" alt="DK Photo 2" class="w-full h-auto object-cover"><div class="portfolio-overlay"><i data-lucide="eye" class="text-white w-8 h-8"></i></div></div>
+                <div class="masonry-item portfolio-item group"><img src="https://picsum.photos/seed/dk3/400/500" alt="DK Photo 3" class="w-full h-auto object-cover"><div class="portfolio-overlay"><i data-lucide="eye" class="text-white w-8 h-8"></i></div></div>
+                <div class="masonry-item portfolio-item group"><img src="https://picsum.photos/seed/dk4/400/400" alt="DK Photo 4" class="w-full h-auto object-cover"><div class="portfolio-overlay"><i data-lucide="eye" class="text-white w-8 h-8"></i></div></div>
+                <div class="masonry-item portfolio-item group"><img src="https://picsum.photos/seed/dk5/400/700" alt="DK Photo 5" class="w-full h-auto object-cover"><div class="portfolio-overlay"><i data-lucide="eye" class="text-white w-8 h-8"></i></div></div>
+                <div class="masonry-item portfolio-item group"><img src="https://picsum.photos/seed/dk6/400/400" alt="DK Photo 6" class="w-full h-auto object-cover"><div class="portfolio-overlay"><i data-lucide="eye" class="text-white w-8 h-8"></i></div></div>
+                <div class="masonry-item portfolio-item group"><img src="https://picsum.photos/seed/dk7/400/550" alt="DK Photo 7" class="w-full h-auto object-cover"><div class="portfolio-overlay"><i data-lucide="eye" class="text-white w-8 h-8"></i></div></div>
+                <div class="masonry-item portfolio-item group"><img src="https://picsum.photos/seed/dk8/400/350" alt="DK Photo 8" class="w-full h-auto object-cover"><div class="portfolio-overlay"><i data-lucide="eye" class="text-white w-8 h-8"></i></div></div>
             </div>
         </div>
     </section>
 
-    <!-- Reviews Section -->
+    <!-- Reviews -->
     <section id="reviews" class="py-24 px-6 md:px-16 bg-surface overflow-hidden relative z-10 border-t border-gray-900 border-b">
         <div class="max-w-7xl mx-auto">
             <h2 class="font-playfair text-4xl mb-12 text-white">Client Stories</h2>
-            
+
+            <!-- Dynamic carousel — populated by Firebase -->
             <div class="review-carousel" id="review-carousel">
-                <div class="review-card">
-                    <div class="flex text-accent mb-4">
-                        <i data-lucide="star" class="fill-accent text-accent w-4 h-4"></i>
-                        <i data-lucide="star" class="fill-accent text-accent w-4 h-4"></i>
-                        <i data-lucide="star" class="fill-accent text-accent w-4 h-4"></i>
-                        <i data-lucide="star" class="fill-accent text-accent w-4 h-4"></i>
-                        <i data-lucide="star" class="fill-accent text-accent w-4 h-4"></i>
+                <!-- Skeleton loaders shown until Firestore responds -->
+                <div class="review-card animate-pulse" id="skeleton-1">
+                    <div class="flex gap-1 mb-4">
+                        <div class="w-4 h-4 rounded bg-gray-700"></div><div class="w-4 h-4 rounded bg-gray-700"></div><div class="w-4 h-4 rounded bg-gray-700"></div><div class="w-4 h-4 rounded bg-gray-700"></div><div class="w-4 h-4 rounded bg-gray-700"></div>
                     </div>
-                    <p class="text-gray-300 italic mb-6">"Dipak captured our wedding beautifully. The attention to detail and creative angles made our memories look like a movie!"</p>
-                    <div class="font-bold text-white">- Rahul & Priya</div>
+                    <div class="h-3 bg-gray-700 rounded mb-2 w-full"></div>
+                    <div class="h-3 bg-gray-700 rounded mb-6 w-3/4"></div>
+                    <div class="h-3 bg-gray-700 rounded w-1/3"></div>
                 </div>
-                <div class="review-card">
-                    <div class="flex text-accent mb-4">
-                        <i data-lucide="star" class="fill-accent text-accent w-4 h-4"></i>
-                        <i data-lucide="star" class="fill-accent text-accent w-4 h-4"></i>
-                        <i data-lucide="star" class="fill-accent text-accent w-4 h-4"></i>
-                        <i data-lucide="star" class="fill-accent text-accent w-4 h-4"></i>
-                        <i data-lucide="star" class="fill-accent text-accent w-4 h-4"></i>
+                <div class="review-card animate-pulse" id="skeleton-2">
+                    <div class="flex gap-1 mb-4">
+                        <div class="w-4 h-4 rounded bg-gray-700"></div><div class="w-4 h-4 rounded bg-gray-700"></div><div class="w-4 h-4 rounded bg-gray-700"></div><div class="w-4 h-4 rounded bg-gray-700"></div><div class="w-4 h-4 rounded bg-gray-700"></div>
                     </div>
-                    <p class="text-gray-300 italic mb-6">"Absolutely stunning portraits for my birthday. Made me feel so comfortable in front of the camera."</p>
-                    <div class="font-bold text-white">- Sneha K.</div>
-                </div>
-                <div class="review-card">
-                    <div class="flex text-accent mb-4">
-                        <i data-lucide="star" class="fill-accent text-accent w-4 h-4"></i>
-                        <i data-lucide="star" class="fill-accent text-accent w-4 h-4"></i>
-                        <i data-lucide="star" class="fill-accent text-accent w-4 h-4"></i>
-                        <i data-lucide="star" class="fill-accent text-accent w-4 h-4"></i>
-                        <i data-lucide="star" class="text-gray-600 w-4 h-4"></i>
-                    </div>
-                    <p class="text-gray-300 italic mb-6">"Great service for my engagement. Delivered the photos very fast, edit quality was top-notch."</p>
-                    <div class="font-bold text-white">- Amit T.</div>
+                    <div class="h-3 bg-gray-700 rounded mb-2 w-full"></div>
+                    <div class="h-3 bg-gray-700 rounded mb-6 w-2/3"></div>
+                    <div class="h-3 bg-gray-700 rounded w-1/4"></div>
                 </div>
             </div>
 
+            <!-- Leave a Review form -->
             <div class="mt-16 max-w-xl border-t border-gray-800 pt-12">
                 <h3 class="text-xl font-playfair mb-6 text-white border-b-2 border-accent inline-block pb-2">Leave a Review</h3>
                 <form id="review-form" class="space-y-4">
-                    <div>
-                        <input type="text" id="reviewer-name" placeholder="Your Name" class="w-full bg-primary border border-gray-800 text-white p-3 focus:border-accent outline-none transition-colors" required>
-                    </div>
-                    <div class="flex items-center gap-2 mb-2">
+                    <input type="text" id="reviewer-name" placeholder="Your Name" class="w-full bg-primary border border-gray-800 text-white p-3 focus:border-accent outline-none transition-colors" required>
+                    <div class="flex items-center gap-3">
                         <span class="text-sm text-gray-400">Rating:</span>
-                        <div class="star-rating flex cursor-pointer" id="star-rating">
-                            <i data-lucide="star" class="w-5 h-5 text-gray-600 hover:text-accent transition-colors star-item" data-value="1"></i>
-                            <i data-lucide="star" class="w-5 h-5 text-gray-600 hover:text-accent transition-colors star-item" data-value="2"></i>
-                            <i data-lucide="star" class="w-5 h-5 text-gray-600 hover:text-accent transition-colors star-item" data-value="3"></i>
-                            <i data-lucide="star" class="w-5 h-5 text-gray-600 hover:text-accent transition-colors star-item" data-value="4"></i>
-                            <i data-lucide="star" class="w-5 h-5 text-gray-600 hover:text-accent transition-colors star-item" data-value="5"></i>
+                        <!-- Inline SVG star rating — no CDN dependency -->
+                        <div id="star-rating" class="flex gap-1 cursor-pointer">
+                            <svg data-value="1" class="star-item w-6 h-6 transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            <svg data-value="2" class="star-item w-6 h-6 transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            <svg data-value="3" class="star-item w-6 h-6 transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            <svg data-value="4" class="star-item w-6 h-6 transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            <svg data-value="5" class="star-item w-6 h-6 transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
                         </div>
+                        <span id="star-label" class="text-sm text-accent font-semibold">5 / 5</span>
                     </div>
-                    <div>
-                        <textarea id="review-text" placeholder="Tell us about your experience..." rows="3" class="w-full bg-primary border border-gray-800 text-white p-3 focus:border-accent outline-none transition-colors resize-none" required></textarea>
-                    </div>
-                    <button type="submit" class="bg-accent text-primary px-6 py-2 font-bold uppercase tracking-wide hover:bg-white transition-colors text-sm">Submit Review</button>
+                    <textarea id="review-text" placeholder="Tell us about your experience..." rows="3" class="w-full bg-primary border border-gray-800 text-white p-3 focus:border-accent outline-none transition-colors resize-none" required></textarea>
+                    <button type="submit" id="review-submit" class="bg-accent text-primary px-6 py-2 font-bold uppercase tracking-wide hover:bg-white transition-colors text-sm disabled:opacity-50 disabled:cursor-not-allowed">Submit Review</button>
+                    <div id="review-status" class="hidden text-sm mt-1"></div>
                 </form>
             </div>
         </div>
     </section>
 
-    <!-- Contact & Footer Section -->
+    <!-- Contact -->
     <section id="contact" class="py-24 px-6 md:px-16 bg-primary relative z-10">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-16">
-            <div class="w-full md:w-5/12">
-                <h2 class="font-playfair text-4xl md:text-5xl font-bold mb-6 text-white">Let's Create<br>Magic</h2>
-                <p class="text-gray-400 mb-10 text-sm leading-relaxed">Ready to book your session or have a question about our services? Reach out to us.</p>
-                
-                <div class="space-y-6">
-                    <div class="flex items-start gap-4">
-                        <div class="bg-surface p-3 rounded-full text-accent"><i data-lucide="map-pin" class="w-5 h-5"></i></div>
-                        <div>
-                            <h4 class="text-white font-medium mb-1">Studio Location</h4>
-                            <p class="text-gray-400 text-sm">Lane No. 2, Digawade Maal</p>
-                        </div>
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="font-playfair text-4xl md:text-5xl font-bold mb-4 text-white">Let's Create<br><span class="text-accent italic">Magic</span></h2>
+            <p class="text-gray-400 mb-14 text-base leading-relaxed">Ready to book your session or have a question? Reach out directly.</p>
+
+            <!-- Contact Details -->
+            <div class="flex flex-col md:flex-row justify-center gap-10 md:gap-16 mb-14">
+                <!-- Location -->
+                <div class="flex flex-col items-center gap-3">
+                    <div class="bg-surface p-4 rounded-full text-accent border border-gray-800">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
                     </div>
-                    <div class="flex items-start gap-4">
-                        <div class="bg-surface p-3 rounded-full text-accent"><i data-lucide="phone" class="w-5 h-5"></i></div>
-                        <div>
-                            <h4 class="text-white font-medium mb-1">Phone</h4>
-                            <p class="text-gray-400 text-sm">1234567890</p>
-                        </div>
+                    <h4 class="text-accent text-xs uppercase tracking-widest font-semibold">Studio</h4>
+                    <p class="text-white font-bold text-lg">Lane No. 2, Digawade Maal</p>
+                </div>
+                <!-- Phone -->
+                <div class="flex flex-col items-center gap-3">
+                    <div class="bg-surface p-4 rounded-full text-accent border border-gray-800">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.83a16 16 0 0 0 6.29 6.29l1.62-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                     </div>
-                    <div class="flex items-start gap-4">
-                        <div class="bg-surface p-3 rounded-full text-accent"><i data-lucide="mail" class="w-5 h-5"></i></div>
-                        <div>
-                            <h4 class="text-white font-medium mb-1">Email</h4>
-                            <p class="text-gray-400 text-sm">demo@gmail.com</p>
-                        </div>
+                    <h4 class="text-accent text-xs uppercase tracking-widest font-semibold">Phone</h4>
+                    <a href="tel:7721898125" class="text-white font-bold text-lg hover:text-accent transition-colors">+91 9881783393</a>
+                </div>
+                <!-- Email -->
+                <div class="flex flex-col items-center gap-3">
+                    <div class="bg-surface p-4 rounded-full text-accent border border-gray-800">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
                     </div>
+                    <h4 class="text-accent text-xs uppercase tracking-widest font-semibold">Email</h4>
+                    <a href="mailto:dipakkamble@gmail.com" class="text-white font-bold text-lg hover:text-accent transition-colors">prem.kamble78@gmail.com</a>
                 </div>
             </div>
 
-            <div class="w-full md:w-7/12 bg-surface p-8 md:p-12 border border-gray-800">
-                <form class="space-y-6">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                            <label class="block text-xs uppercase text-gray-500 mb-2">Name</label>
-                            <input type="text" class="w-full bg-primary border-b border-gray-700 text-white p-2 focus:border-accent outline-none transition-colors" required>
+            <!-- Social Media Links -->
+            <div class="border-t border-gray-800 pt-12">
+                <p class="text-gray-500 text-xs uppercase tracking-widest mb-8">Follow Us</p>
+                <div class="flex justify-center gap-8 items-center">
+                    <!-- Instagram -->
+                    <a href="https://www.instagram.com/dipakparshuramkamble" target="_blank" class="group flex flex-col items-center gap-2 text-gray-400 hover:text-accent transition-colors" title="Instagram">
+                        <div class="bg-surface p-4 rounded-full border border-gray-800 group-hover:border-accent transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
                         </div>
-                        <div>
-                            <label class="block text-xs uppercase text-gray-500 mb-2">Phone</label>
-                            <input type="tel" class="w-full bg-primary border-b border-gray-700 text-white p-2 focus:border-accent outline-none transition-colors" required>
+                        <span class="text-xs font-medium">Instagram</span>
+                    </a>
+                    <!-- Facebook -->
+                    <a href="https://www.facebook.com/sipakkamble" target="_blank" class="group flex flex-col items-center gap-2 text-gray-400 hover:text-accent transition-colors" title="Facebook">
+                        <div class="bg-surface p-4 rounded-full border border-gray-800 group-hover:border-accent transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
                         </div>
-                    </div>
-                    <div>
-                        <label class="block text-xs uppercase text-gray-500 mb-2">Message</label>
-                        <textarea rows="4" class="w-full bg-primary border-b border-gray-700 text-white p-2 focus:border-accent outline-none transition-colors resize-none" required></textarea>
-                    </div>
-                    <button type="submit" class="w-full bg-accent text-primary py-4 font-bold uppercase tracking-widest hover:bg-white transition-colors">Send Message</button>
-                </form>
+                        <span class="text-xs font-medium">Facebook</span>
+                    </a>
+                    <!-- YouTube -->
+                    <a href="https://youtube.com/@ideal_marathi?si=I64IJibVvIW8UslC" target="_blank" class="group flex flex-col items-center gap-2 text-gray-400 hover:text-accent transition-colors" title="YouTube">
+                        <div class="bg-surface p-4 rounded-full border border-gray-800 group-hover:border-accent transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><polygon points="10 15 15 12 10 9"/></svg>
+                        </div>
+                        <span class="text-xs font-medium">YouTube</span>
+                    </a>
+                    <!-- WhatsApp -->
+                    <a href="https://wa.me/9881783393" target="_blank" class="group flex flex-col items-center gap-2 text-gray-400 hover:text-[#25D366] transition-colors" title="WhatsApp">
+                        <div class="bg-surface p-4 rounded-full border border-gray-800 group-hover:border-[#25D366] transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+                        </div>
+                        <span class="text-xs font-medium">WhatsApp</span>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
     <footer class="bg-[#050505] py-12 px-6 md:px-16 border-t border-gray-900 relative z-10">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
-            <div class="flex items-center gap-2">
-                <i data-lucide="aperture" class="text-accent w-6 h-6"></i>
-                <span class="font-playfair text-lg font-bold tracking-wider text-white">Dipak Photo</span>
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+            <!-- Left: Brand + Copyright -->
+            <div class="flex flex-col items-center md:items-start gap-1">
+                <div class="flex items-center gap-2">
+                    <i data-lucide="aperture" class="text-accent w-5 h-5"></i>
+                    <span class="font-playfair text-lg font-bold tracking-wider text-white">Dipak Photo</span>
+                </div>
+                <p class="text-gray-500 text-xs">© 2026 Dipak Kamble. All rights reserved.</p>
             </div>
-            <p class="text-gray-500 text-sm">© 2026 Dipak Kamble. All rights reserved.</p>
-            <div class="flex gap-4">
-                <a href="#" class="text-gray-400 hover:text-accent transition-colors"><i data-lucide="instagram" class="w-5 h-5"></i></a>
-                <a href="#" class="text-gray-400 hover:text-accent transition-colors"><i data-lucide="facebook" class="w-5 h-5"></i></a>
-                <a href="#" class="text-gray-400 hover:text-accent transition-colors"><i data-lucide="message-circle" class="w-5 h-5"></i></a>
-            </div>
+            <!-- Right: Developer -->
+            <p class="text-gray-600 text-m">
+                Project by
+                <a href="https://www.instagram.com/darshan_22__15" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-accent transition-colors font-medium">Darshan Kamble</a>
+            </p>
         </div>
     </footer>
 
-    <!-- Lightbox Modal -->
+    <!-- Lightbox -->
     <div id="lightbox" class="fixed inset-0 z-[100] bg-black/95 hidden flex-col justify-center items-center opacity-0 transition-opacity duration-300">
-        <button id="lightbox-close" class="absolute top-6 right-6 text-gray-400 hover:text-white transition-colors cursor-pointer">
-            <i data-lucide="x" class="w-8 h-8"></i>
-        </button>
+        <button id="lightbox-close" class="absolute top-6 right-6 text-gray-400 hover:text-white transition-colors cursor-pointer"><i data-lucide="x" class="w-8 h-8"></i></button>
         <img id="lightbox-img" src="" alt="Expanded View" class="max-w-[95vw] max-h-[90vh] object-contain scale-95 transition-transform duration-300">
     </div>
 
     <script>
-        // Initialize simple line icons 
-        lucide.createIcons();
+        // Wait for the Lucide CDN library and DOM to fully load before creating icons
+        if (window.lucide) {
+            lucide.createIcons();
+        } else {
+            document.addEventListener('DOMContentLoaded', () => lucide.createIcons());
+            window.addEventListener('load', () => lucide.createIcons());
+        }
     </script>
-    <script src="script.js?v=2"></script>
+    <script src="script.js?v=4"></script>
+
+    <!-- ============================================================
+         FIREBASE MODULE
+         Writes to Firestore only. Emails are sent server-side
+         by Firebase Cloud Functions (functions/index.js) via Resend.
+         ============================================================ -->
+    <script type="module">
+        import { initializeApp }  from "https://www.gstatic.com/firebasejs/12.11.0/firebase-app.js";
+        import { getFirestore, collection, addDoc, serverTimestamp, getDocs, query, where }
+            from "https://www.gstatic.com/firebasejs/12.11.0/firebase-firestore.js";
+
+        const firebaseConfig = {
+            apiKey:            "AIzaSyDMp9UPB6xrf6_gjO0oiUOr30c4Ce8JcaI",
+            authDomain:        "dipak-photo.firebaseapp.com",
+            projectId:         "dipak-photo",
+            storageBucket:     "dipak-photo.firebasestorage.app",
+            messagingSenderId: "486422058442",
+            appId:             "1:486422058442:web:6c52635492e9279352eb33"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db  = getFirestore(app);
+
+        function showStatus(id, msg, isError = false) {
+            const el = document.getElementById(id);
+            if (!el) return;
+            el.textContent = msg;
+            el.className = `text-sm mt-1 ${isError ? 'text-red-400' : 'text-green-400'}`;
+            el.classList.remove('hidden');
+            setTimeout(() => el.classList.add('hidden'), 5000);
+        }
+
+        // ── CONTACT FORM ────────────────────────────────────────
+        // Writes to 'inquiries' → triggers onNewInquiry Cloud Function → Resend email
+        const contactForm   = document.getElementById('contact-form');
+        const contactSubmit = document.getElementById('contact-submit');
+
+        if (contactForm) {
+            contactForm.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                const name    = document.getElementById('contact-name').value.trim();
+                const phone   = document.getElementById('contact-phone').value.trim();
+                const service = document.getElementById('contact-service').value;
+                const message = document.getElementById('contact-message').value.trim();
+                if (!name || !phone || !message) return;
+
+                const orig = contactSubmit.innerText;
+                contactSubmit.innerText = 'Sending...';
+                contactSubmit.disabled  = true;
+
+                try {
+                    await addDoc(collection(db, 'inquiries'), {
+                        name,
+                        phone,
+                        service: service || 'Not specified',
+                        message,
+                        status: 'new',
+                        createdAt: serverTimestamp()
+                    });
+                    showStatus('contact-status', '✓ Message sent! We will contact you soon.');
+                    contactForm.reset();
+                } catch (err) {
+                    console.error(err);
+                    showStatus('contact-status', '✗ Failed to send. Please try again.', true);
+                } finally {
+                    contactSubmit.innerText = orig;
+                    contactSubmit.disabled  = false;
+                }
+            });
+        }
+
+        // ── REVIEW SECTION ─────────────────────────────────────
+        const reviewCarousel    = document.getElementById('review-carousel');
+        const reviewForm        = document.getElementById('review-form');
+        const reviewSubmitBtn   = document.getElementById('review-submit');
+        const reviewerNameInput = document.getElementById('reviewer-name');
+        const reviewTextInput   = document.getElementById('review-text');
+
+        // Helper: build star SVG HTML for a given rating
+        function buildStarsSvg(rating) {
+            let html = '<div class="flex gap-1 mb-4">';
+            for (let i = 1; i <= 5; i++) {
+                const col = i <= rating ? '#c9a84c' : '#4b5563';
+                const fill = i <= rating ? '#c9a84c' : 'none';
+                html += `<svg viewBox="0 0 24 24" width="16" height="16" fill="${fill}" stroke="${col}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>`;
+            }
+            return html + '</div>';
+        }
+
+        // Helper: build a review card element
+        function buildReviewCard(name, text, rating) {
+            const card = document.createElement('div');
+            card.className = 'review-card';
+            card.innerHTML = `
+                ${buildStarsSvg(rating)}
+                <p class="text-gray-300 italic mb-6">"${text}"</p>
+                <div class="font-bold text-white">- ${name}</div>`;
+            return card;
+        }
+
+        // Load approved reviews from Firestore
+        async function loadReviews() {
+            try {
+                const q = query(
+                    collection(db, 'reviews'),
+                    where('approved', '==', true)
+                );
+                const snapshot = await getDocs(q);
+
+                // Remove skeleton loaders
+                document.getElementById('skeleton-1')?.remove();
+                document.getElementById('skeleton-2')?.remove();
+
+                if (snapshot.empty) {
+                    reviewCarousel.innerHTML = '<p class="text-gray-500 text-sm italic py-4">No reviews yet. Be the first to share your experience!</p>';
+                    return;
+                }
+
+                // Sort newest first client-side (no composite index needed)
+                const reviews = [];
+                snapshot.forEach(doc => reviews.push(doc.data()));
+                reviews.sort((a, b) => (b.createdAt?.seconds || 0) - (a.createdAt?.seconds || 0));
+                reviews.forEach(d => reviewCarousel.appendChild(buildReviewCard(d.name, d.text, d.rating || 5)));
+
+            } catch (err) {
+                console.error('Error loading reviews:', err);
+                document.getElementById('skeleton-1')?.remove();
+                document.getElementById('skeleton-2')?.remove();
+                reviewCarousel.innerHTML = '<p class="text-gray-500 text-sm italic py-4">Could not load reviews. Please refresh the page.</p>';
+            }
+        }
+
+        loadReviews();
+
+        // Submit new review
+        if (reviewForm) {
+            reviewForm.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                const name   = reviewerNameInput.value.trim();
+                const text   = reviewTextInput.value.trim();
+                const rating = window.currentRating || 0;
+                if (!name || !text) return;
+                if (rating === 0) {
+                    showStatus('review-status', '⚠ Please select a star rating.', true);
+                    return;
+                }
+
+                const orig = reviewSubmitBtn.innerText;
+                reviewSubmitBtn.innerText = 'Saving...';
+                reviewSubmitBtn.disabled  = true;
+
+                try {
+                    await addDoc(collection(db, 'reviews'), {
+                        name, text, rating,
+                        approved: false,
+                        createdAt: serverTimestamp()
+                    });
+
+                    // Show new card immediately (pending approval note)
+                    const card = buildReviewCard(name, text, rating);
+                    card.classList.add('opacity-0', 'translate-y-4', 'transition-all', 'duration-500');
+                    const pendingNote = document.createElement('p');
+                    pendingNote.className = 'text-xs text-yellow-500 mt-2 italic';
+                    pendingNote.textContent = '⏳ Pending approval';
+                    card.appendChild(pendingNote);
+                    reviewCarousel.appendChild(card);
+                    setTimeout(() => card.classList.remove('opacity-0', 'translate-y-4'), 50);
+                    setTimeout(() => reviewCarousel.scrollTo({ left: reviewCarousel.scrollWidth, behavior: 'smooth' }), 100);
+
+                    showStatus('review-status', '✓ Review submitted! It will appear once approved.');
+                    reviewForm.reset();
+                    if (window.updateStars) window.updateStars(5);
+
+                } catch (err) {
+                    console.error(err);
+                    showStatus('review-status', '✗ Failed to submit. Please try again.', true);
+                } finally {
+                    reviewSubmitBtn.innerText = orig;
+                    reviewSubmitBtn.disabled  = false;
+                }
+            });
+        }
+    </script>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/911234567890" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 bg-[#25D366] text-white p-4 rounded-full shadow-[0_4px_15px_rgba(37,211,102,0.4)] hover:bg-[#20bd5a] transition-all duration-300 z-50 flex items-center justify-center hover:scale-110 group border border-[#1ebd5a]" title="Chat on WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-circle">
+            <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/>
+        </svg>
+        <span class="absolute right-full mr-4 bg-[#1a1a1a] text-white text-sm font-medium px-4 py-2 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none border border-gray-800">
+            Chat with us!
+        </span>
+    </a>
 </body>
 </html>
